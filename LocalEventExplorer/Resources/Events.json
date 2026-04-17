@@ -1,0 +1,42 @@
+[
+    {
+      "id": 1,
+      "title": "Toronto Food Festival",
+      "location": "Toronto",
+      "time": "2026-05-10T14:00:00Z",
+      "imageURL": "https://picsum.photos/300/300?random=1",
+      "isBookmarked": false
+    },
+    {
+      "id": 2,
+      "title": "Tech Meetup 2026",
+      "location": "Mississauga",
+      "time": "2026-05-12T18:30:00Z",
+      "imageURL": "https://picsum.photos/300/300?random=2",
+      "isBookmarked": true
+    },
+    {
+      "id": 3,
+      "title": "Art & Craft Fair",
+      "location": "Downtown Toronto",
+      "time": "2026-05-15T11:00:00Z",
+      "imageURL": "https://picsum.photos/300/300?random=3",
+      "isBookmarked": false
+    },
+    {
+      "id": 4,
+      "title": "Live Music Concert",
+      "location": "Scarborough",
+      "time": "2026-05-18T20:00:00Z",
+      "imageURL": "https://picsum.photos/300/300?random=4",
+      "isBookmarked": false
+    },
+    {
+      "id": 5,
+      "title": "Startup Networking Event",
+      "location": "North York",
+      "time": "2026-05-20T17:00:00Z",
+      "imageURL": "https://picsum.photos/300/300?random=5",
+      "isBookmarked": true
+    }
+  ]
