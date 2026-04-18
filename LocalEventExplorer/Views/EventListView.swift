@@ -27,6 +27,9 @@ struct EventListView: View {
             }
         }.task {
             await viewModel.fetchEvents()
+        }.onAppear {
+            LocationManager().requestPermission()
+            LocationManager().startUpdating()
         }
     }
 }

@@ -15,7 +15,9 @@ extension Event {
             location: entity.location ?? "",
             time: entity.time ?? Date(),
             imageURL: entity.imageURL ?? "",
-            isBookmarked: entity.isBookmarked
+            isBookmarked: entity.isBookmarked,
+            longitude: entity.longitude,
+            latitude: entity.latitude
         )
     }
 }
@@ -29,6 +31,8 @@ extension EventModel {
         self.time = event.time
         self.imageURL = event.imageURL
         self.isBookmarked = event.isBookmarked
+        self.latitude = event.latitude
+        self.longitude = event.longitude
     }
 }
 

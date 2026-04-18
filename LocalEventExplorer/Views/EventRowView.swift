@@ -12,7 +12,7 @@ struct EventRowView: View {
     
     var event: Event
     let onBookmarkTap: () -> Void
-
+    
     var body: some View {
         HStack {
             AsyncImage(url: URL(string: event.imageURL)) { image in
@@ -51,6 +51,8 @@ struct EventRowView: View {
                       location: "City Hall",
                       time: Date(timeIntervalSinceNow: 1500),
                       imageURL: "https://picsum.photos/300/300?random=6",
-                      isBookmarked: false)
+                      isBookmarked: false,
+                      longitude: -79.4637,
+                      latitude: 43.6465)
     EventRowView(event: event, onBookmarkTap: {})
 }

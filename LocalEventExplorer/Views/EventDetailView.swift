@@ -6,11 +6,14 @@
 //
 
 import SwiftUI
+import CoreLocation
+import MapKit
 
 struct EventDetailView: View {
     
     var event: Event
     let onBookmarkTap: () -> Void
+    @StateObject private var locationManager = LocationManager()
 
     var body: some View {
         ScrollView {
@@ -49,9 +52,12 @@ struct EventDetailView: View {
                 
                 HStack {
                     Image(systemName: "location")
-                    Text(event.location)
+                    Text("\(event.location) - \(distance)")
                 }
                 .foregroundColor(.secondary)
+                .onTapGesture {
+                    openMaps()
+                }
                 
                 HStack {
                     Image(systemName: "calendar")
@@ -76,6 +82,27 @@ struct EventDetailView: View {
         }
         .ignoresSafeArea(edges: .top)
     }
+    
+    var distance: String {
+        guard let user = locationManager.userLocation else { return "--" }
+        
+        let eventLocation = CLLocation(latitude: event.latitude,
+                                       longitude: event.longitude)
+        
+        let meters = user.distance(from: eventLocation)
+        
+        let km = meters / 1000
+        return String(format: "%.1f km away", km)
+    }
+    
+    func openMaps() {
+        let mapItem = MKMapItem(location: CLLocation(latitude: event.latitude, longitude: event.longitude), address: MKAddress(fullAddress: event.location, shortAddress: nil))
+        mapItem.name = event.title
+        
+        mapItem.openInMaps(launchOptions: [
+            MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving
+        ])
+    }
 }
 
 #Preview {
@@ -84,6 +111,8 @@ struct EventDetailView: View {
                       location: "City Hall",
                       time: Date(timeIntervalSinceNow: 1500),
                       imageURL: "https://picsum.photos/300/300?random=6",
-                      isBookmarked: false)
+                      isBookmarked: false,
+                      longitude: -79.4637,
+                      latitude: 43.6465)
     EventDetailView(event: event, onBookmarkTap: {})
 }

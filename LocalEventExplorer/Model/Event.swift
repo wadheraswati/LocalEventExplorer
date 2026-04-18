@@ -14,18 +14,24 @@ class Event: Codable, Identifiable {
     var time: Date
     var imageURL: String
     var isBookmarked: Bool
+    var latitude: Double
+    var longitude: Double
 
     init(id: UUID,
          title: String,
          location: String,
          time: Date,
          imageURL: String,
-         isBookmarked: Bool = false) {
+         isBookmarked: Bool = false,
+         longitude: Double,
+         latitude: Double) {
         self.id = id
         self.title = title
         self.location = location
         self.time = time
         self.imageURL = imageURL
         self.isBookmarked = isBookmarked
+        self.longitude = longitude
+        self.latitude = latitude
     }
 }
