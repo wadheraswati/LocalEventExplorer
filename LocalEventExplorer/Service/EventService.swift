@@ -8,8 +8,14 @@
 import Foundation
 import CoreData
 
-class EventService: EventProtocol {
+class EventService: EventServiceProtocol {
     
+    let eventDataRepository: EventDataRepositoryProtocol
+    
+    init(eventDataRepository: EventDataRepositoryProtocol) {
+        self.eventDataRepository = eventDataRepository
+    }
+
     func fetchEvents() async throws -> [Event] {
         do {
             return try await NetworkManager.shared.request(
@@ -24,7 +30,7 @@ class EventService: EventProtocol {
     
     private func fetchEventsFromLocal() async throws -> [Event] {
         do {
-            let events = try await EventDataManager.fetchEventsFromDB()
+            let events = try await eventDataRepository.fetchEventsFromDB()
             guard !events.isEmpty else {
                 return try await loadEventsFromLocalFile()
             }
@@ -46,7 +52,7 @@ class EventService: EventProtocol {
         
         do {
             let events = try decoder.decode([Event].self, from: data)
-            EventDataManager.saveEventsInDB(events)
+            eventDataRepository.saveEventsInDB(events)
             return events
         } catch {
             print(error)
@@ -55,7 +61,7 @@ class EventService: EventProtocol {
     }
     
     func update(_ event: Event) {
-        EventDataManager.update(event)
+        eventDataRepository.update(event)
     }
     
     

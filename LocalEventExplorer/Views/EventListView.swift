@@ -11,7 +11,7 @@ struct EventListView: View {
     @StateObject private var viewModel: EventViewModel
     
     init() {
-        let service = EventService()
+        let service = EventService(eventDataRepository: EventDataRepository())
         _viewModel = StateObject(
             wrappedValue: EventViewModel(
                 service: service,

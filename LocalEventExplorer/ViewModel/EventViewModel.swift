@@ -7,19 +7,15 @@
 
 import Combine
 
-protocol EventProtocol {
-    func fetchEvents() async throws -> [Event]
-    func update(_ event: Event)
-}
-
 class EventViewModel: ObservableObject {
     @Published var events: [Event] = []
     
-    private let service: EventProtocol
+    private let service: EventServiceProtocol
     
-    init(service: EventProtocol) {
+    init(service: EventServiceProtocol) {
         self.service = service
     }
+    
     func fetchEvents() async {
         do {
             events = try await service.fetchEvents()

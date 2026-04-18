@@ -1,5 +1,5 @@
 //
-//  EventDataManager.swift
+//  EventDataRepository.swift
 //  LocalEventExplorer
 //
 //  Created by Swati Seera on 2026-04-17.
@@ -36,9 +36,13 @@ extension EventModel {
     }
 }
 
-class EventDataManager {
+
+
+class EventDataRepository: EventDataRepositoryProtocol {
     
-    static func fetchEventsFromDB() async throws -> [Event] {
+    let context = CoreDataManager.shared.context
+
+    func fetchEventsFromDB() async throws -> [Event] {
         let context = CoreDataManager.shared.context
         
         let request: NSFetchRequest<EventModel> = EventModel.fetchRequest()
@@ -53,7 +57,7 @@ class EventDataManager {
         return []
     }
     
-    static func saveEventsInDB(_ events: [Event]) {
+    func saveEventsInDB(_ events: [Event]) {
         let context = CoreDataManager.shared.context
 
         for event in events {
@@ -63,7 +67,7 @@ class EventDataManager {
         CoreDataManager.shared.save()
     }
     
-    static func update(_ event: Event) {
+    func update(_ event: Event) {
         let context = CoreDataManager.shared.context
         let request: NSFetchRequest<EventModel> = EventModel.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@", event.id as CVarArg)
