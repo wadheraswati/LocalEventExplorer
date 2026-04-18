@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		D5F1F5D02F92F6A50061B5C7 /* EventModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D5F1F5CE2F92F6A50061B5C7 /* EventModel.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		D5F1F5262F9293AD0061B5C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,9 +31,15 @@
 		D5F1F5182F9293A80061B5C7 /* LocalEventExplorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocalEventExplorer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F1F5252F9293AD0061B5C7 /* LocalEventExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalEventExplorerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5F1F52F2F9293AE0061B5C7 /* LocalEventExplorerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LocalEventExplorerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5F1F5CF2F92F6A50061B5C7 /* EventModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EventModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		D564E0192F92FCA4004B1ED1 /* DataManager */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DataManager;
+			sourceTree = "<group>";
+		};
 		D5F1F51A2F9293A80061B5C7 /* LocalEventExplorer */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = LocalEventExplorer;
@@ -70,6 +80,8 @@
 		D5F1F50F2F9293A80061B5C7 = {
 			isa = PBXGroup;
 			children = (
+				D564E0192F92FCA4004B1ED1 /* DataManager */,
+				D5F1F5CE2F92F6A50061B5C7 /* EventModel.xcdatamodeld */,
 				D5F1F51A2F9293A80061B5C7 /* LocalEventExplorer */,
 				D5F1F5282F9293AD0061B5C7 /* LocalEventExplorerTests */,
 				D5F1F5192F9293A80061B5C7 /* Products */,
@@ -102,6 +114,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				D564E0192F92FCA4004B1ED1 /* DataManager */,
 				D5F1F51A2F9293A80061B5C7 /* LocalEventExplorer */,
 			);
 			name = LocalEventExplorer;
@@ -227,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5F1F5D02F92F6A50061B5C7 /* EventModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +610,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D5F1F5CE2F92F6A50061B5C7 /* EventModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D5F1F5CF2F92F6A50061B5C7 /* EventModel.xcdatamodel */,
+			);
+			currentVersion = D5F1F5CF2F92F6A50061B5C7 /* EventModel.xcdatamodel */;
+			path = EventModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D5F1F5102F9293A80061B5C7 /* Project object */;
 }

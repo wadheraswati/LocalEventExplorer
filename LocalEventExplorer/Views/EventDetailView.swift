@@ -79,7 +79,7 @@ struct EventDetailView: View {
 }
 
 #Preview {
-    var event = Event(id: 1,
+    var event = Event(id: UUID(),
                       title: "Baisakhi Celebration",
                       location: "City Hall",
                       time: Date(timeIntervalSinceNow: 1500),

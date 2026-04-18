@@ -6,8 +6,10 @@
 //
 
 import Foundation
+import CoreData
 
 class EventService {
+    
     func fetchEvents() async throws -> [Event] {
         do {
             return try await NetworkManager.shared.request(
@@ -16,12 +18,23 @@ class EventService {
             )
         }
         catch {
-            return try await loadEvents()
+            return try await fetchEventsFromLocal()
         }
     }
     
-    func loadEvents() async throws -> [Event] {
-        
+    func fetchEventsFromLocal() async throws -> [Event] {
+        do {
+            let events = try await EventDataManager.fetchEventsFromDB()
+            guard !events.isEmpty else {
+                return try await loadEventsFromLocalFile()
+            }
+            return events
+        } catch {
+            return try await loadEventsFromLocalFile()
+        }
+    }
+    
+    func loadEventsFromLocalFile() async throws -> [Event] {
         guard let url = Bundle.main.url(forResource: "Events", withExtension: "json") else {
             throw URLError(.fileDoesNotExist)
         }
@@ -31,6 +44,15 @@ class EventService {
         let decoder = JSONDecoder()
         decoder.dateDecodingStrategy = .iso8601
         
-        return try decoder.decode([Event].self, from: data)
+        do {
+            let events = try decoder.decode([Event].self, from: data)
+            EventDataManager.saveEventsInDB(events)
+            return events
+        } catch {
+            print(error)
+        }
+        return []
     }
+    
+    
 }

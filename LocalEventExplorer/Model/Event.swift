@@ -8,14 +8,14 @@
 import Foundation
 
 class Event: Codable, Identifiable {
-    var id: Int
+    var id: UUID
     var title: String
     var location: String
     var time: Date
     var imageURL: String
     var isBookmarked: Bool
 
-    init(id: Int,
+    init(id: UUID,
          title: String,
          location: String,
          time: Date,

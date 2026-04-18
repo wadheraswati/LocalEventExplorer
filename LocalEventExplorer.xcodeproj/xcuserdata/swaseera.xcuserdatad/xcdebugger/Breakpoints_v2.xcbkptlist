@@ -7,52 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6AEC71B4-6BD9-443A-BED6-C9991361273D"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "LocalEventExplorer/Views/EventListView.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "body"
-            landmarkType = "24">
-            <Locations>
-               <Location
-                  uuid = "6AEC71B4-6BD9-443A-BED6-C9991361273D - 4267ead38e58ed03"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; LocalEventExplorer.EventDetailView in closure #1 (LocalEventExplorer.Event) -&gt; SwiftUI.NavigationLink&lt;LocalEventExplorer.EventRowView, LocalEventExplorer.EventDetailView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;LocalEventExplorer.Event&gt;, Swift.Int, SwiftUI.NavigationLink&lt;LocalEventExplorer.EventRowView, LocalEventExplorer.EventDetailView&gt;&gt; in closure #1 () -&gt; SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;LocalEventExplorer.Event&gt;, Swift.Int, SwiftUI.NavigationLink&lt;LocalEventExplorer.EventRowView, LocalEventExplorer.EventDetailView&gt;&gt;&gt; in LocalEventExplorer.EventListView.body.getter : some"
-                  moduleName = "LocalEventExplorer.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Views/EventListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18">
-               </Location>
-               <Location
-                  uuid = "6AEC71B4-6BD9-443A-BED6-C9991361273D - 34d17279f18b3b73"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; LocalEventExplorer.EventDetailView in closure #1 (LocalEventExplorer.Event) -&gt; SwiftUI.NavigationLink&lt;LocalEventExplorer.EventRowView, LocalEventExplorer.EventDetailView&gt; in closure #1 () -&gt; SwiftUI.ForEach&lt;Swift.Array&lt;LocalEventExplorer.Event&gt;, Swift.Int, SwiftUI.NavigationLink&lt;LocalEventExplorer.EventRowView, LocalEventExplorer.EventDetailView&gt;&gt; in closure #1 () -&gt; SwiftUI.List&lt;Swift.Never, SwiftUI.ForEach&lt;Swift.Array&lt;LocalEventExplorer.Event&gt;, Swift.Int, SwiftUI.NavigationLink&lt;LocalEventExplorer.EventRowView, LocalEventExplorer.EventDetailView&gt;&gt;&gt; in LocalEventExplorer.EventListView.body.getter : some"
-                  moduleName = "LocalEventExplorer.debug.dylib"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Views/EventListView.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "0673811D-4B45-47F8-B623-03D30085E895"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
@@ -69,73 +23,253 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "D9209633-655E-4060-B71A-6FB099E20C7A"
+            uuid = "3DB6A490-40BC-4C88-A7AD-1515EB702AF2"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "LocalEventExplorer/ViewModel/EventViewModel.swift"
+            filePath = "LocalEventExplorer/Service/EventService.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "16"
-            endingLineNumber = "16"
-            landmarkName = "fetchEvents()"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "loadEventsFromLocalFile()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D9209633-655E-4060-B71A-6FB099E20C7A - b9ff937286b9a0"
+                  uuid = "3DB6A490-40BC-4C88-A7AD-1515EB702AF2 - 5bc5f4141e72f81b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(1) suspend resume partial function for LocalEventExplorer.EventViewModel.fetchEvents() async -&gt; ()"
+                  symbolName = "(1) suspend resume partial function for LocalEventExplorer.EventService.loadEventsFromLocalFile() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
                   moduleName = "LocalEventExplorer.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/ViewModel/EventViewModel.swift"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17">
+                  startingLineNumber = "39"
+                  endingLineNumber = "39">
                </Location>
                <Location
-                  uuid = "D9209633-655E-4060-B71A-6FB099E20C7A - 8fbe2145aef10883"
+                  uuid = "3DB6A490-40BC-4C88-A7AD-1515EB702AF2 - 4f50e2836fa52f62"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(2) await resume partial function for LocalEventExplorer.EventViewModel.fetchEvents() async -&gt; ()"
+                  symbolName = "LocalEventExplorer.EventService.loadEventsFromLocalFile() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
                   moduleName = "LocalEventExplorer.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/ViewModel/EventViewModel.swift"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17">
+                  startingLineNumber = "38"
+                  endingLineNumber = "38">
                </Location>
                <Location
-                  uuid = "D9209633-655E-4060-B71A-6FB099E20C7A - 9d2a9ad1463b15d2"
+                  uuid = "3DB6A490-40BC-4C88-A7AD-1515EB702AF2 - 5bc5f4141e72f83a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(3) suspend resume partial function for LocalEventExplorer.EventViewModel.fetchEvents() async -&gt; ()"
+                  symbolName = "(1) suspend resume partial function for LocalEventExplorer.EventService.loadEventsFromLocalFile() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
                   moduleName = "LocalEventExplorer.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/ViewModel/EventViewModel.swift"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17">
+                  startingLineNumber = "38"
+                  endingLineNumber = "38">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D9FE15DB-A5C8-4224-85DA-4C19B7F12C13"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LocalEventExplorer/Service/EventService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "33"
+            endingLineNumber = "33"
+            landmarkName = "fetchEventsFromLocal()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D9FE15DB-A5C8-4224-85DA-4C19B7F12C13 - 30e7d70a19ff76f8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(3) suspend resume partial function for LocalEventExplorer.EventService.fetchEventsFromLocal() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
+                  moduleName = "LocalEventExplorer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34">
                </Location>
                <Location
-                  uuid = "D9209633-655E-4060-B71A-6FB099E20C7A - e0932bb1b18d43c5"
+                  uuid = "D9FE15DB-A5C8-4224-85DA-4C19B7F12C13 - 8aac823a2fe31a7b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "(4) suspend resume partial function for LocalEventExplorer.EventViewModel.fetchEvents() async -&gt; ()"
+                  symbolName = "(6) await resume partial function for LocalEventExplorer.EventService.fetchEventsFromLocal() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
                   moduleName = "LocalEventExplorer.debug.dylib"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/ViewModel/EventViewModel.swift"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17">
+                  startingLineNumber = "33"
+                  endingLineNumber = "33">
+               </Location>
+               <Location
+                  uuid = "D9FE15DB-A5C8-4224-85DA-4C19B7F12C13 - dbe08a14d54dfe07"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(7) suspend resume partial function for LocalEventExplorer.EventService.fetchEventsFromLocal() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
+                  moduleName = "LocalEventExplorer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33">
+               </Location>
+               <Location
+                  uuid = "D9FE15DB-A5C8-4224-85DA-4C19B7F12C13 - ee235b6c47ae9c04"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for LocalEventExplorer.EventService.fetchEventsFromLocal() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
+                  moduleName = "LocalEventExplorer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33">
+               </Location>
+               <Location
+                  uuid = "D9FE15DB-A5C8-4224-85DA-4C19B7F12C13 - f163eba7ca933a05"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(9) suspend resume partial function for LocalEventExplorer.EventService.fetchEventsFromLocal() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
+                  moduleName = "LocalEventExplorer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33">
+               </Location>
+               <Location
+                  uuid = "D9FE15DB-A5C8-4224-85DA-4C19B7F12C13 - 31efabcf289266c1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(10) suspend resume partial function for LocalEventExplorer.EventService.fetchEventsFromLocal() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
+                  moduleName = "LocalEventExplorer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B864D594-3085-42A3-A55A-BDBA12E07D82"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LocalEventExplorer/Service/EventDataManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "saveEventsInDB(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "548ACFFD-7E13-48A7-AD5C-8AB723E5FC4A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LocalEventExplorer/Service/EventService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "48"
+            endingLineNumber = "48"
+            landmarkName = "loadEventsFromLocalFile()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06701B69-950D-4C98-A9F9-2EE00D771C78"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LocalEventExplorer/Service/EventService.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "fetchEventsFromLocal()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "06701B69-950D-4C98-A9F9-2EE00D771C78 - 1b64767b23b609e7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(1) suspend resume partial function for LocalEventExplorer.EventService.fetchEventsFromLocal() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
+                  moduleName = "LocalEventExplorer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
+               </Location>
+               <Location
+                  uuid = "06701B69-950D-4C98-A9F9-2EE00D771C78 - 44037bb9b4449185"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(2) await resume partial function for LocalEventExplorer.EventService.fetchEventsFromLocal() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
+                  moduleName = "LocalEventExplorer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
+               </Location>
+               <Location
+                  uuid = "06701B69-950D-4C98-A9F9-2EE00D771C78 - ee235b6c47ae9ffe"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "(8) suspend resume partial function for LocalEventExplorer.EventService.fetchEventsFromLocal() async throws -&gt; Swift.Array&lt;LocalEventExplorer.Event&gt;"
+                  moduleName = "LocalEventExplorer.debug.dylib"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/swaseera/Documents/LocalEventExplorer/LocalEventExplorer/Service/EventService.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27">
                </Location>
             </Locations>
          </BreakpointContent>

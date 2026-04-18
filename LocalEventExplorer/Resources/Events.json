@@ -1,42 +1,42 @@
 [
     {
-      "id": 1,
-      "title": "Toronto Food Festival",
-      "location": "Toronto",
-      "time": "2026-05-10T14:00:00Z",
-      "imageURL": "https://picsum.photos/id/237/200/300",
-      "isBookmarked": false
+        "id": "1A2B3C4D-1111-2222-3333-1234567890AB",
+        "title": "Toronto Food Festival",
+        "location": "Toronto",
+        "time": "2026-05-10T14:00:00Z",
+        "imageURL": "https://picsum.photos/id/237/200/300",
+        "isBookmarked": false
     },
     {
-      "id": 2,
-      "title": "Tech Meetup 2026",
-      "location": "Mississauga",
-      "time": "2026-05-12T18:30:00Z",
-      "imageURL": "https://picsum.photos/id/230/300/300",
-      "isBookmarked": true
+        "id": "2B3C4D5E-2222-3333-4444-2345678901BC",
+        "title": "Tech Meetup 2026",
+        "location": "Mississauga",
+        "time": "2026-05-12T18:30:00Z",
+        "imageURL": "https://picsum.photos/id/230/300/300",
+        "isBookmarked": true
     },
     {
-      "id": 3,
-      "title": "Art & Craft Fair",
-      "location": "Downtown Toronto",
-      "time": "2026-05-15T11:00:00Z",
-      "imageURL": "https://picsum.photos/id/235/300/300",
-      "isBookmarked": false
+        "id": "3C4D5E6F-3333-4444-5555-3456789012CD",
+        "title": "Art & Craft Fair",
+        "location": "Downtown Toronto",
+        "time": "2026-05-15T11:00:00Z",
+        "imageURL": "https://picsum.photos/id/235/300/300",
+        "isBookmarked": false
     },
     {
-      "id": 4,
-      "title": "Live Music Concert",
-      "location": "Scarborough",
-      "time": "2026-05-18T20:00:00Z",
-      "imageURL": "https://picsum.photos/id/232/300/300",
-      "isBookmarked": false
+        "id": "bc2d0f53-5041-46e8-a14c-267875a49f0c",
+        "title": "Live Music Concert",
+        "location": "Scarborough",
+        "time": "2026-05-18T20:00:00Z",
+        "imageURL": "https://picsum.photos/id/232/300/300",
+        "isBookmarked": false
     },
     {
-      "id": 5,
-      "title": "Startup Networking Event",
-      "location": "North York",
-      "time": "2026-05-20T17:00:00Z",
-      "imageURL": "https://picsum.photos/id/234/300/300",
-      "isBookmarked": true
+        "id": "cc2d0f53-5041-46e8-a14c-267875a49f0c",
+        "title": "Startup Networking Event",
+        "location": "North York",
+        "time": "2026-05-20T17:00:00Z",
+        "imageURL": "https://picsum.photos/id/234/300/300",
+        "isBookmarked": true
     }
-  ]
+]
