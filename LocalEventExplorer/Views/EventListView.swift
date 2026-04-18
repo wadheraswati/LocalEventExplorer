@@ -8,7 +8,16 @@
 import SwiftUI
 
 struct EventListView: View {
-    @StateObject var viewModel = EventViewModel()
+    @StateObject private var viewModel: EventViewModel
+    
+    init() {
+        let service = EventService()
+        _viewModel = StateObject(
+            wrappedValue: EventViewModel(
+                service: service,
+            )
+        )
+    }
     
     var body: some View {
         NavigationStack {

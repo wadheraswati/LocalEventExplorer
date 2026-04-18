@@ -8,7 +8,7 @@
 import Foundation
 import CoreData
 
-class EventService {
+class EventService: EventProtocol {
     
     func fetchEvents() async throws -> [Event] {
         do {
