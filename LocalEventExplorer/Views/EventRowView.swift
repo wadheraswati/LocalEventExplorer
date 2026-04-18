@@ -15,12 +15,9 @@ struct EventRowView: View {
     
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: event.imageURL)) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-            .frame(width: 60, height: 60)
+            CachedImageView(urlString: event.imageURL)
+                .frame(width: 60, height: 60)
+                .cornerRadius(8)
             
             VStack(alignment: .leading) {
                 Text(event.title)

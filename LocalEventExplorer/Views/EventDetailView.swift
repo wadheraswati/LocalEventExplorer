@@ -21,15 +21,9 @@ struct EventDetailView: View {
             // MARK: - Hero Image with Bookmark Overlay
             ZStack(alignment: .bottomTrailing) {
                 
-                AsyncImage(url: URL(string: event.imageURL)) { image in
-                    image
-                        .resizable()
-                        .scaledToFill()
-                } placeholder: {
-                    ProgressView()
-                }
-                .frame(height: 280)
-                .clipped()
+                CachedImageView(urlString: event.imageURL)
+                    .frame(height: 280)
+                    .clipped()
                 
                 Button {
                     onBookmarkTap()
