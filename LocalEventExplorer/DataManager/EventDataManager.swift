@@ -37,6 +37,7 @@ extension EventModel {
 }
 
 class EventDataManager {
+    
     static func fetchEventsFromDB() async throws -> [Event] {
         let context = CoreDataManager.shared.context
         
@@ -54,7 +55,6 @@ class EventDataManager {
     
     static func saveEventsInDB(_ events: [Event]) {
         let context = CoreDataManager.shared.context
-        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = EventModel.fetchRequest()
 
         for event in events {
             let entity = EventModel(context: context)

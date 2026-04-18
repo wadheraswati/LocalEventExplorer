@@ -22,7 +22,7 @@ class EventService {
         }
     }
     
-    func fetchEventsFromLocal() async throws -> [Event] {
+    private func fetchEventsFromLocal() async throws -> [Event] {
         do {
             let events = try await EventDataManager.fetchEventsFromDB()
             guard !events.isEmpty else {
@@ -34,7 +34,7 @@ class EventService {
         }
     }
     
-    func loadEventsFromLocalFile() async throws -> [Event] {
+    private func loadEventsFromLocalFile() async throws -> [Event] {
         guard let url = Bundle.main.url(forResource: "Events", withExtension: "json") else {
             throw URLError(.fileDoesNotExist)
         }
