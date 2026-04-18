@@ -58,4 +58,19 @@ class EventDataManager {
         }
         CoreDataManager.shared.save()
     }
+    
+    static func update(_ event: Event) {
+        let context = CoreDataManager.shared.context
+        let request: NSFetchRequest<EventModel> = EventModel.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@", event.id as CVarArg)
+        
+        do {
+            if let entity = try context.fetch(request).first {
+                entity.isBookmarked = event.isBookmarked
+                CoreDataManager.shared.save()
+            }
+        } catch {
+            print("Toggle error: \(error)")
+        }
+    }
 }

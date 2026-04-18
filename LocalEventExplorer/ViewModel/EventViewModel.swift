@@ -25,6 +25,7 @@ class EventViewModel: ObservableObject {
         events = events.map { currentEvent in
             if currentEvent.id == event.id {
                 currentEvent.isBookmarked.toggle()
+                service.update(currentEvent)
             }
             return currentEvent
         }

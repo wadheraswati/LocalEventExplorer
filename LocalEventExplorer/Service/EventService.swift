@@ -54,5 +54,9 @@ class EventService {
         return []
     }
     
+    func update(_ event: Event) {
+        EventDataManager.update(event)
+    }
+    
     
 }
