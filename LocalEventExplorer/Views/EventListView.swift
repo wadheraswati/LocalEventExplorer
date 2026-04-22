@@ -11,10 +11,9 @@ struct EventListView: View {
     @StateObject private var viewModel: EventViewModel
     
     init() {
-        let service = EventService(eventDataRepository: EventDataRepository())
         _viewModel = StateObject(
             wrappedValue: EventViewModel(
-                service: service,
+                repository: EventDataRepository()
             )
         )
     }
@@ -32,6 +31,17 @@ struct EventListView: View {
                             viewModel.toggleBookmark(event)
                         })
                     }
+                }
+            }
+            .navigationTitle("Events")
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    NavigationLink {
+                        BookmarkedEventsView()
+                    } label: {
+                        Image(systemName: "bookmark.fill")
+                    }
+                    .buttonBorderShape(.capsule)
                 }
             }
         }.task {

@@ -1,13 +1,13 @@
 //
-//  EventViewModel.swift
+//  BookmarkedEventsViewModel.swift
 //  LocalEventExplorer
 //
-//  Created by Swati Seera on 2026-04-17.
+//  Created by Swati Seera on 2026-04-22.
 //
 
 import Combine
 
-class EventViewModel: ObservableObject {
+class BookmarkedEventsViewModel: ObservableObject {
     @Published var events: [Event] = []
     
     private let repository: EventDataRepositoryProtocol
@@ -18,7 +18,7 @@ class EventViewModel: ObservableObject {
     
     func fetchEvents() async {
         do {
-            events = try await repository.fetchEvents()
+            events = try await repository.fetchBookmarkedEvents()
         }
         catch {
             print("API Error: \(error)")

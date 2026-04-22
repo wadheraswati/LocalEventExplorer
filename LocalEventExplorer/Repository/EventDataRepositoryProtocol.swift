@@ -6,7 +6,7 @@
 //
 
 protocol EventDataRepositoryProtocol {
-    func fetchEventsFromDB() async throws -> [Event]
-    func saveEventsInDB(_ events: [Event])
+    func fetchEvents() async throws -> [Event]
+    func fetchBookmarkedEvents() async throws -> [Event]
     func update(_ event: Event)
 }
