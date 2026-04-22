@@ -27,11 +27,12 @@ class EventViewModel: ObservableObject {
     
     func toggleBookmark(_ event: Event) {
         events = events.map { currentEvent in
-            if currentEvent.id == event.id {
-                currentEvent.isBookmarked.toggle()
-                service.update(currentEvent)
+            var updatedEvent = currentEvent
+            if updatedEvent.id == event.id {
+                updatedEvent.isBookmarked.toggle()
+                service.update(updatedEvent)
             }
-            return currentEvent
+            return updatedEvent
         }
     }
 }

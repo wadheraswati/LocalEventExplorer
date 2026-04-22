@@ -8,7 +8,7 @@ import CoreData
 
 // Entity → Model
 extension Event {
-    convenience init(entity: EventModel) {
+    init(entity: EventModel) {
         self.init(
             id: entity.id ?? UUID(),
             title: entity.title ?? "",

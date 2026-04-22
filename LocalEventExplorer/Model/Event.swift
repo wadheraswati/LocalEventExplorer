@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Event: Codable, Identifiable {
+struct Event: Codable, Identifiable {
     var id: UUID
     var title: String
     var location: String

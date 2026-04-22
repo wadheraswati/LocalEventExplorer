@@ -9,9 +9,9 @@ import XCTest
 import CoreData
 @testable import LocalEventExplorer
 
-class EventViewModelTests: XCTestCase {
+@MainActor
+final class EventViewModelTests: XCTestCase {
     
-    @MainActor
     func testFetchEvents() {
         // Given
         let vm = EventViewModel(
@@ -27,7 +27,6 @@ class EventViewModelTests: XCTestCase {
         XCTAssertTrue(vm.events.isEmpty)
     }
     
-    @MainActor
     func testToggleBookmark() async throws {
         // Given
         let vm = EventViewModel(
