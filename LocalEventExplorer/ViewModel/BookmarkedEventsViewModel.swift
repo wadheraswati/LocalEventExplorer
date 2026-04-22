@@ -25,14 +25,17 @@ class BookmarkedEventsViewModel: ObservableObject {
         }
     }
     
-    func toggleBookmark(_ event: Event) {
-        events = events.map { currentEvent in
-            var updatedEvent = currentEvent
-            if updatedEvent.id == event.id {
-                updatedEvent.isBookmarked.toggle()
-                repository.update(updatedEvent)
-            }
-            return updatedEvent
+    func refresh() {
+        Task {
+            await fetchEvents()
         }
+    }
+    
+    func toggleBookmark(_ event: Event) {
+        var updatedEvent = event
+        updatedEvent.isBookmarked.toggle()
+        repository.update(updatedEvent)
+        refresh()
+
     }
 }

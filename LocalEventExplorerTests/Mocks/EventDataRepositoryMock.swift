@@ -1,5 +1,5 @@
 //
-//  MockEventService.swift
+//  EventDataRepositoryMock.swift
 //  LocalEventExplorer
 //
 //  Created by Swati Seera on 2026-04-19.
@@ -8,21 +8,22 @@
 import XCTest
 @testable import LocalEventExplorer
 
-class MockEventService: EventServiceProtocol {
+class EventDataRepositoryMock: EventDataRepositoryProtocol {
     
     var dbUpdated: Bool = false
-    let eventDataRepository: EventDataRepositoryProtocol
-
-    init(eventDataRepository: EventDataRepositoryProtocol) {
-        self.eventDataRepository = eventDataRepository
+    
+    func fetchEvents() async throws -> [Event] {
+        return [Event.mockEvent]
+    }
+    
+    func fetchBookmarkedEvents() async throws -> [Event] {
+        let events = [Event.mockEvent]
+        let bookmarkedEvents = events.filter({$0.isBookmarked == true})
+        return bookmarkedEvents
     }
     
     func update(_ event: Event) {
         dbUpdated = true
-    }
-    
-    func fetchEvents() async throws -> [Event] {
-        return [Event.mockEvent]
     }
 }
 

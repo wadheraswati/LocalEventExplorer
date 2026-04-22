@@ -15,8 +15,20 @@ final class EventViewModelTests: XCTestCase {
     func testFetchEvents() {
         // Given
         let vm = EventViewModel(
-            service: MockEventService(eventDataRepository: EventDataRepository()),
-        )
+            repository: EventDataRepositoryMock())
+        
+        // When
+        Task {
+            await vm.fetchEvents()
+        }
+        
+        // Then
+        XCTAssertTrue(vm.events.isEmpty)
+    }
+    
+    func testBookmarkedEvents() {
+        // Given
+        let vm = BookmarkedEventsViewModel(repository: EventDataRepositoryMock())
         
         // When
         Task {
@@ -30,8 +42,8 @@ final class EventViewModelTests: XCTestCase {
     func testToggleBookmark() async throws {
         // Given
         let vm = EventViewModel(
-            service: MockEventService(eventDataRepository: EventDataRepository()),
-        )
+            repository: EventDataRepositoryMock())
+        
         let expectation = XCTestExpectation(description: "Data loaded")
 
         Task {
